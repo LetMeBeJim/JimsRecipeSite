@@ -1,0 +1,254 @@
+.home-container {  
+  display: grid;
+  color:#000;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.85fr 0.75fr 0.25fr 0.6fr 0.75fr 0.25fr 0.5fr 0.5fr;
+  gap: 0px 15px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "foreword foreword foreword foreword foreword"
+    "pic-1 pic-1 pic-1 txt-1 txt-1"
+    "pic-1 pic-1 pic-1 txt-1 txt-1"
+    "vid-1 vid-1 vid-1 vid-1 vid-1"
+    "txt-2 txt-2 pic-2 pic-2 pic-2"
+    "txt-2 txt-2 pic-2 pic-2 pic-2"
+    "vid-2 vid-2 vid-2 vid-2 vid-2"
+    "projects projects projects projects projects";
+  }
+
+  .home-container p {
+    text-align: left;
+  }
+
+  .home-container img {
+    border-radius: 10%;
+    transition: .5s ease;
+  }
+
+  .home-container img:hover {
+    opacity: 0.5;
+  }
+
+  .home-container img:hover + .text-over{
+    display: block;
+  }
+
+  .text-over {
+    display: none;
+    font-size: 7rem;
+    color: #da7532;
+    top: 25%;
+    left: 30%;
+    justify-content: center;
+    text-align:center;
+    position: absolute;
+    align-items: center;
+  }
+
+  .text-over-2 {
+     margin: 0 auto;
+     text-align: center;
+     justify-content:center;
+     align-items:center;
+     top: 0px;
+     left: 12%;
+     font-size: 6rem;
+     color: #fff;
+     position: absolute;
+  }
+
+  .vid-1 {
+    position: relative;
+    max-height: 450px;  
+    background-color: #7b8c42;
+    border-radius: 2%;
+    overflow: hidden;
+  }
+
+  .vid-2 {
+    position: relative;
+    max-height: 450px;
+    background-color: #fbbe94;
+    border-radius: 2%;
+    overflow: hidden;
+  }
+
+  .foreword { 
+    grid-area: foreword;
+    padding: 1em;
+    color: #fff;
+    border-radius: 30px;
+    background: linear-gradient(100deg, #da7532 0%, rgb(255, 185, 105) 110%);
+  }
+  
+  .pic-1 { 
+    grid-area: pic-1;
+    position: relative; }
+  
+  .txt-1 { grid-area: txt-1; }
+  
+  .vid-1 { grid-area: vid-1; }
+  
+  .txt-2 { grid-area: txt-2; }
+  
+  .pic-2 { 
+    grid-area: pic-2;
+    position: relative; }
+  
+  .vid-2 { grid-area: vid-2; }
+  
+  .projects { 
+    grid-area: projects;
+    width: 100%;
+    font-size: 0.75em;
+    display: table;
+  }
+  .project img {
+    width: 90%;
+  }
+
+  .project-row {
+    display:table-row;
+  }
+
+  .project {
+    display: table-cell;
+    width: 25%;
+  }
+
+  .project-title {
+    color:#fbbe94;
+    font-size: 2.5em;
+    display: table-cell;
+    width: 25%;
+    height: 100px;
+  }
+
+  
+  @media screen and (max-width: 960px) {
+    .home-container {  
+      display: grid;
+      color:#000;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
+      gap: 10px 15px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "foreword foreword"
+        "pic-1 pic-1"
+        "pic-1 pic-1"
+        "txt-1 txt-1"
+        "vid-1 vid-1"
+        "txt-2 txt-2"
+        "pic-2 pic-2"
+        "pic-2 pic-2"
+        "vid-2 vid-2"
+        "projects projects";
+      }
+      
+      .home-container img {
+        border-radius: 10%;
+        transition: .5s ease;
+      }
+    
+      .home-container img:hover {
+        opacity: 0.5;
+      }
+    
+      .home-container img:hover + .text-over{
+        display: block;
+      }
+    
+      .text-over {
+        display: none;
+        font-size: 7rem;
+        color: #da7532;
+        top: -20%;
+        left: 35%;
+        justify-content: center;
+        text-align:center;
+        position: absolute;
+        align-items: center;
+      }
+    
+      .text-over-2 {
+         margin: 0 auto;
+         text-align: center;
+         justify-content:center;
+         align-items:center;
+         top: -250px;
+         left: 20%;
+         font-size: 5rem;
+         color: #fff;
+         position: absolute;
+      }
+    
+    
+      .vid-1 {
+        position: relative;
+        max-height: 450px;  
+        background-color: #7b8c42;
+        border-radius: 2%;
+        overflow: hidden;
+      }
+    
+      .vid-2 {
+        position: relative;
+        max-height: 450px;
+        background-color: #fbbe94;
+        border-radius: 2%;
+        overflow: hidden;
+      }
+    
+      .foreword { grid-area: foreword; }
+      
+      .pic-1 { 
+        grid-area: pic-1;
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;}
+      
+      .txt-1 { grid-area: txt-1; }
+      
+      .vid-1 { grid-area: vid-1; }
+      
+      .txt-2 { grid-area: txt-2; }
+      
+      .pic-2 { 
+        grid-area: pic-2;
+        position: relative; }
+      
+      .vid-2 { grid-area: vid-2; }
+      
+      .projects { 
+        grid-area: projects;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .project img {
+        max-width: 200px;
+      }  
+      .project {
+        display: table-cell;
+        width: 25%;
+      }
+    
+      .project-title {
+        color:#fbbe94;
+        font-size: 2em;
+        display: table-cell;
+        width: 25%;
+        height: 70px;
+      }
+    
+    }

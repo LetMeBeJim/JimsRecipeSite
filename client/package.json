@@ -1,0 +1,65 @@
+{
+  "name": "website",
+  "version": "0.1.0",
+  "proxy": "http://localhost:5000/",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "markdown-to-jsx": "^7.1.8",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.8.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-ig-embed": "^2.0.21",
+    "react-native-web": "^0.18.10",
+    "react-router-dom": "^6.4.4",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-toggle-dark-mode": "^1.1.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "server": "node server/index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "Just my little site, got scraps from here and there",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LetMeBeJim/JimsRecipeSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LetMeBeJim/JimsRecipeSite/issues"
+  },
+  "homepage": "."
+}
