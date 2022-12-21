@@ -5,7 +5,7 @@
     "dotenv": "^16.0.3",
     "react-bootstrap": "^2.7.0"    
   },
-  "script": {
-    "build": "BUILD_PATH='./client' react-scripts build"
+  "scripts": {
+    "build": "cd client && react-scripts build"
   }
 }
