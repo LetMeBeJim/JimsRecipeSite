@@ -3,6 +3,7 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
-    "react-bootstrap": "^2.7.0"
+    "react-bootstrap": "^2.7.0",
+    "build": "react-scripts build"
   }
 }
