@@ -12,22 +12,22 @@ db.recipes.drop();
 
 // Insert a few documents into the sales collection.
 db.recipes.insertMany([
-  { '_id': 1, 'name': 'aaaaa aaaaa', 'price': 10, 'quantity': 2, 'date': new Date('2014-03-01T08:00:00Z') },
-  { '_id': 2, 'name': 'bbbbb bbbbb', 'price': 20, 'quantity': 1, 'date': new Date('2014-03-01T09:00:00Z') },
-  { '_id': 3, 'name': 'ccccc ccccc', 'price': 5, 'quantity': 10, 'date': new Date('2014-03-15T09:00:00Z') },
-  { '_id': 4, 'name': 'ddddd ddddd', 'price': 5, 'quantity':  20, 'date': new Date('2014-04-04T11:21:39.736Z') },
-  { '_id': 5, 'name': 'eeeee eeeee', 'price': 10, 'quantity': 10, 'date': new Date('2014-04-04T21:23:13.331Z') },
-  { '_id': 6, 'name': 'fffff fffff', 'price': 7.5, 'quantity': 5, 'date': new Date('2015-06-04T05:08:13Z') },
-  { '_id': 7, 'name': 'ggggg ggggg', 'price': 7.5, 'quantity': 10, 'date': new Date('2015-09-10T08:43:00Z') },
-  { '_id': 8, 'name': 'hhhhh hhhhh', 'price': 10, 'quantity': 5, 'date': new Date('2016-02-06T20:20:13Z') },
-  { '_id': 9, 'name': 'iiiii iiiii', 'price': 10, 'quantity': 2, 'date': new Date('2014-03-01T08:00:00Z') },
-  { '_id': 10, 'name': 'jjjjj jjjjj', 'price': 20, 'quantity': 1, 'date': new Date('2014-03-01T09:00:00Z') },
-  { '_id': 11, 'name': 'kkkkk kkkkk', 'price': 5, 'quantity': 10, 'date': new Date('2014-03-15T09:00:00Z') },
-  { '_id': 12, 'name': 'lllll lllll', 'price': 5, 'quantity':  20, 'date': new Date('2014-04-04T11:21:39.736Z') },
-  { '_id': 13, 'name': 'mmmmm mmmmm', 'price': 10, 'quantity': 10, 'date': new Date('2014-04-04T21:23:13.331Z') },
-  { '_id': 14, 'name': 'nnnnn nnnnn', 'price': 7.5, 'quantity': 5, 'date': new Date('2015-06-04T05:08:13Z') },
-  { '_id': 15, 'name': 'ooooo ooooo', 'price': 7.5, 'quantity': 10, 'date': new Date('2015-09-10T08:43:00Z') },
-  { '_id': 16, 'name': 'ppppp ppppp', 'price': 10, 'quantity': 5, 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 1, 'name': 'aaaaa aaaaa', 'price': 10, 'page': 'a', 'quantity': 2, 'link': 'https://www.instagram.com/p/CYY_v9qLSFS/?utm_source=ig_web_copy_link'},
+  { '_id': 2, 'name': 'bbbbb bbbbb', 'price': 20, 'page': 'b','quantity': 1, 'link': 'https://www.instagram.com/p/CYKXoY4t-FI/?utm_source=ig_web_copy_link'},
+  { '_id': 3, 'name': 'ccccc ccccc', 'price': 5, 'page': 'c','quantity': 10, 'link': 'https://www.instagram.com/p/CYJ0xLmhsEv/?next=%2F'},
+  { '_id': 4, 'name': 'ddddd ddddd', 'price': 5, 'page': 'd','quantity':  20, 'link': 'https://www.instagram.com/p/CYY_v9qLSFS/?utm_source=ig_web_copy_link'},
+  { '_id': 5, 'name': 'eeeee eeeee', 'price': 10, 'page': 'e','quantity': 10, 'link': 'https://www.instagram.com/p/CYKXoY4t-FI/?utm_source=ig_web_copy_link'},
+  { '_id': 6, 'name': 'fffff fffff', 'price': 7.5, 'page': 'f','quantity': 5, 'link': 'https://www.instagram.com/p/CYJ0xLmhsEv/?next=%2F'},
+  { '_id': 7, 'name': 'ggggg ggggg', 'price': 7.5, 'page': 'g','quantity': 10, 'link': 'https://www.instagram.com/p/CYY_v9qLSFS/?utm_source=ig_web_copy_link'},
+  { '_id': 8, 'name': 'hhhhh hhhhh', 'price': 10, 'page': 'h','quantity': 5, 'link': 'https://www.instagram.com/p/CYKXoY4t-FI/?utm_source=ig_web_copy_link'},
+  { '_id': 9, 'name': 'iiiii iiiii', 'price': 10, 'page': 'i','quantity': 2, 'link': 'https://www.instagram.com/p/CYJ0xLmhsEv/?next=%2F'},
+  { '_id': 10, 'name': 'jjjjj jjjjj', 'price': 20, 'page': 'j','quantity': 1, 'link': 'https://www.instagram.com/p/CYY_v9qLSFS/?utm_source=ig_web_copy_link'},
+  { '_id': 11, 'name': 'kkkkk kkkkk', 'price': 5, 'page': 'k','quantity': 10, 'link': 'https://www.instagram.com/p/CYKXoY4t-FI/?utm_source=ig_web_copy_link'},
+  { '_id': 12, 'name': 'lllll lllll', 'price': 5, 'page': 'l','quantity':  20, 'link': 'https://www.instagram.com/p/CYJ0xLmhsEv/?next=%2F'},
+  { '_id': 13, 'name': 'mmmmm mmmmm', 'price': 10, 'page': 'm','quantity': 10, 'link': 'https://www.instagram.com/p/CYY_v9qLSFS/?utm_source=ig_web_copy_link'},
+  { '_id': 14, 'name': 'nnnnn nnnnn', 'price': 7.5, 'page': 'n','quantity': 5, 'link': 'https://www.instagram.com/p/CYKXoY4t-FI/?utm_source=ig_web_copy_link'},
+  { '_id': 15, 'name': 'ooooo ooooo', 'price': 7.5, 'page': 'o','quantity': 10, 'link': 'https://www.instagram.com/p/CYJ0xLmhsEv/?next=%2F'},
+  { '_id': 16, 'name': 'ppppp ppppp', 'price': 10, 'page': 'p','quantity': 5, 'link': 'https://www.instagram.com/p/CYY_v9qLSFS/?utm_source=ig_web_copy_link'},
 ]);
 
 // Run a find command to view items sold on April 4th, 2014.

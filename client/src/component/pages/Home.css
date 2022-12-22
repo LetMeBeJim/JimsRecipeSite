@@ -6,7 +6,7 @@
   text-align: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.85fr 0.75fr 0.25fr 0.6fr 0.75fr 0.25fr 0.5fr 0.5fr;
+  grid-template-rows: 0.85fr 0.75fr 0.25fr 0.6fr 0.6fr 0.25fr 0.5fr 0.5fr;
   gap: 0px 15px;
   grid-auto-flow: row;
   grid-template-areas:

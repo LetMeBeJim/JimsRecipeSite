@@ -4,6 +4,35 @@
     color: #da7532;
 }
 
+.cards {
+  color: black;
+}
+
+.top-buffer { 
+  margin-top: 15px;
+}
+
+.bottom-buffer { 
+  margin-top: 100px;
+}
+
+.recipes-container a .EmbeddedMedia {
+  overflow: hidden;
+  height: 250px;
+  
+}
+
+.insta {
+  position: relative;
+  top: -60px;
+  height: 250px;
+  width: 100%;
+}
+
+.cards:hover {
+  color: #000;
+}
+
 .wip {
     display: flex;
     justify-content: center;
@@ -14,32 +43,37 @@
 }
 
 .fancy_card:hover {
-    transform: translate3D(0,-1px,0) scale(1.03);
+    transform: translate3D(0,-1px,0) scale(1.07);
   }
 
 .fancy_card {
-
-    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 3px 3px rgba(0,0,0,0.22);
     transition: all .5s ease; /* back to normal */
   }
   
 .fancy_card:hover {
-    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     transition: all .4s ease; /* zoom in */
   }
 
 .card_container {
+    border-radius: 10px;
     width: 25%;
-    border-style: solid;
     display: flex;
     height: 400px;
-    justify-content: center; /* center horizontally */
-    align-items: center; /* center vertically*/
+    justify-content: center;
+    align-items: center;
   }
 
 .fancy_card {
     width: 100%;
     height: 100%;
-    background-color: #da7532;
-    overflow: hidden; /* otherwise header image won't respect rounded corners */
+    background-color: #fff4ed;
+    overflow: hidden; 
+  }
+
+  @media (max-width:960px) {
+    .difficulty {
+      display:none;
+    }
   }
