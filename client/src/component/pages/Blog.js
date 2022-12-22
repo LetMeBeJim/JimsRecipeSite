@@ -21,7 +21,6 @@ function Blog() {
             <div className="container">
             <div className="blog_container">
                 <div className="post-wrapper">
-                    <h1>Interesting Things</h1>
                     <Markdown>
                         {postContent}
                     </Markdown>
