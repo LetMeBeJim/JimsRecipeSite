@@ -96,6 +96,14 @@
 .menu-icon {
   display: none;
 }
+
+.site-name:hover {
+  color:#f09152;
+}
+
+.navbar-logo:hover {
+  color:#f09152;
+}
   
   @media screen and (max-width: 960px) {
     .NavbarItems {

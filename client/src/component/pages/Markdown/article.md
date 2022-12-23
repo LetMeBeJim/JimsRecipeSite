@@ -20,11 +20,13 @@ Supposed to be a site that holds everything me-related
 
 ### To Do
 - [ ] Layout Recipes Database
-    - [ ] do bootstrap maybe? 
+    - [x] do bootstrap maybe? 
 - [ ] Optimize for mobile
     - [ ] definitely use bootstrap for all pages other than Home, that one is gone
 - [ ] Add actual recipe data
-- [ ] Remember to add insta link in the recipe data entry, use the insta link to get image for banner display
+    - [x] database structure done
+- [x] Remember to add insta link in the recipe data entry, use the insta link to get image for banner display
+- [ ] Sub pages? 
 - [ ] Write something in the about me section
 
 ### Super super future functionalities
