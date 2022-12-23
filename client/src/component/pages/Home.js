@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { IGEmbed } from 'react-ig-embed';
+import InstagramEmbed from 'react-instagram-embed';
 import './Home.css'
 import '../../App.css'
 import second_image from '../../component/images/2.jpg';
@@ -25,7 +25,19 @@ function Home() {
                         <p>I am an engineer, a soon-to-be computer scientist, with, even though a lot of my friends would disagree, a good taste in picking colour. Explore everything I have here and enjoy your stay!</p>
                     </div>
                     <div className="pic-1">
-                        <IGEmbed url="https://www.instagram.com/p/ClrebZbPzN0/?next=%" />
+                        <InstagramEmbed url="https://www.instagram.com/p/ClrebZbPzN0/" 
+                          clientAccessToken='496653345788413|1d92bb8c6ddd35662e86c3b2db097c16'
+                          maxWidth={320}
+                          hideCaption={false}
+                          containerTagName='div'
+                          protocol=''
+                          injectScript
+                          onLoading={() => {}}
+                          onSuccess={() => {}}
+                          onAfterRender={() => {}}
+                          onFailure={() => {}}
+                       
+                       />
                         <div className="text-over">Hello!</div>
                     </div>
                     <div className="txt-1">

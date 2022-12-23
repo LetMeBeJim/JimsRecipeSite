@@ -3,7 +3,7 @@ import './Recipes.css'
 import wip from '../../component/images/project2.jpg';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';
-import { IGEmbed } from 'react-ig-embed';
+import InstagramEmbed from 'react-instagram-embed';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import React, {useEffect, useState} from 'react'
@@ -43,7 +43,9 @@ function Recipes() {
                                 <div className="top-buffer"></div>
                                 <Row className="card_container fancy_card">
                                     <Col className="insta" sm={8} md={8} lg={6} xl={6}>
-                                        <IGEmbed url={x.link} />
+                                        <InstagramEmbed url={x.link} 
+                                          clientAccessToken='496653345788413|1d92bb8c6ddd35662e86c3b2db097c16'
+                                        />
                                     </Col>
                                     <Col sm={4} md={4} lg={4} xl={4}>{x.name}</Col>
                                     <Col className="difficulty"sm={0} md={0} lg={2} xl={2}>{x.price}</Col>

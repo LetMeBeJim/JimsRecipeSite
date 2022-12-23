@@ -2,8 +2,17 @@
   "dependencies": {
     "boostrap": "^2.0.0",
     "bootstrap": "^5.2.3",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "dotenv": "^16.0.3",
-    "react-bootstrap": "^2.7.0"    
+    "path-browserify": "^1.0.1",
+    "querystring-es3": "^0.2.1",
+    "react-bootstrap": "^2.7.0",
+    "react-instagram-embed": "^3.0.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
   },
   "scripts": {
     "build": "cd client && react-scripts build"
