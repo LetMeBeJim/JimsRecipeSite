@@ -23,4 +23,3 @@ module.exports = function(callback) {
     waiting.push(callback);
   }
 }
-}

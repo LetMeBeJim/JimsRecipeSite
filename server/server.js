@@ -1,5 +1,6 @@
 //run it with npm run dev, this way it updates with browser refresh
 //servername: jimrecipe
+//password: JimYao123
 require('dotenv').config();
 
 const express = require("express");
@@ -18,7 +19,7 @@ MongoClient.connect(uri, { useNewUrlParser: true }, function(err, db) {
   //databasename is the name of the database, note name is recipe, collection is recipes
   var dbo = db.db(databaseName)
   //this part gets $project attributes in recipes table
-  dbo.collection("recipes").aggregate([{ $project : {_id : 1, name: 1, price: 1, link: 1, page: 1}}]).toArray(function(err, result) {
+  dbo.collection("recipes").aggregate([{ $project : {_id : 1, name: 1, difficulty: 1, path: 1, page: 1, steps: 1}}]).toArray(function(err, result) {
     if (err) throw err;
     app.get("/api", (req, res) => {
       //this part sends result to front end, making it into a hash {"recipes":others}

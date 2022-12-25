@@ -1,15 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import InstagramEmbed from 'react-instagram-embed';
 import './Home.css'
 import '../../App.css'
-import second_image from '../../component/images/2.jpg';
-import project1 from '../../component/images/project1.jpg';
-import project2 from '../../component/images/project2.jpg';
-import project3 from '../../component/images/project2.jpg';
-import project4 from '../../component/images/project2.jpg';
-import first_gif from '../../component/images/gif1.gif';
-import second_gif from '../../component/images/gif2.gif';
+import first_image from '../../images/1.jpg';
+import second_image from '../../images/2.jpg';
+import project1 from '../../images/project1.jpg';
+import first_gif from '../../images/gif1.gif';
+import second_gif from '../../images/gif2.gif';
 
 
 function Home() {
@@ -25,19 +22,7 @@ function Home() {
                         <p>I am an engineer, a soon-to-be computer scientist, with, even though a lot of my friends would disagree, a good taste in picking colour. Explore everything I have here and enjoy your stay!</p>
                     </div>
                     <div className="pic-1">
-                        <InstagramEmbed url="https://www.instagram.com/p/ClrebZbPzN0/" 
-                          clientAccessToken='496653345788413|1d92bb8c6ddd35662e86c3b2db097c16'
-                          maxWidth={320}
-                          hideCaption={false}
-                          containerTagName='div'
-                          protocol=''
-                          injectScript
-                          onLoading={() => {}}
-                          onSuccess={() => {}}
-                          onAfterRender={() => {}}
-                          onFailure={() => {}}
-                       
-                       />
+                        <img src={first_image} alt="pic-2" />
                         <div className="text-over">Hello!</div>
                     </div>
                     <div className="txt-1">
@@ -87,17 +72,17 @@ function Home() {
                             </div>
                             <div className="project">
                                 <Link>
-                                    <img src={project2} alt="loading..."/>
+                                    <img src={project1} alt="loading..."/>
                                 </Link>
                             </div>
                             <div className="project">
                                 <Link>
-                                    <img src={project3} alt="loading..."/>
+                                    <img src={project1} alt="loading..."/>
                                 </Link>
                             </div>
                             <div className="project">
                                 <Link>
-                                    <img src={project4} alt="loading..."/>
+                                    <img src={project1} alt="loading..."/>
                                 </Link>
                             </div>
                         </div>
