@@ -22,10 +22,18 @@
   
 }
 
-.insta {
+.pic-container {
   position: relative;
-  top: -60px;
   height: 250px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.pic {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
 }
 

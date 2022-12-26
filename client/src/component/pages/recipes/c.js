@@ -1,5 +1,5 @@
 import '../../../App.css'
-import './page.css'
+import '../Recipes.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -12,26 +12,21 @@ function a() {
     return (
         <>
             <Container className="recipe-container">
-                {data ?  (data.recipe.filter((item) => item._id=== 1)
+                {data ?  (data.recipe.filter((item) => item.name === 'ccccc ccccc')
                 .map((x,i) => {
                     //change to page format
                     return (
                         <>
-                            <div className="top-buffer"></div>
                             <Row>
-                                <Col className="individual_photo_container" sm={12} md={6} lg={6} xl={6}>
-                                    <img className="individual_photo" alt="loading" src={x.path} />
-                                </Col>
+                                <Col className="individual_photo" sm={12} md={8} lg={8} xl={8}>{x.path}</Col>
                                 <Col className="info_card">
-                                    <Row sm={12} md={6} lg={6} xl={6}>{x.name}</Row>
-                                    <Row sm={12} md={6} lg={6} xl={6}>{x.ingredients}</Row>
+                                    <Row sm={12} md={4} lg={4} xl={4}>{x.name}</Row>
+                                    <Row sm={12} md={4} lg={4} xl={4}>{x.ingredients}</Row>
                                 </Col>
                             </Row>
-                            <div className="top-buffer"></div>
                             <Row>
                                 <Col sm={12} md={12} lg={12} xl={12}>{x.steps}</Col>
                             </Row>
-                            <div className="top-buffer"></div>
                         </>
                     )
                 })) : (

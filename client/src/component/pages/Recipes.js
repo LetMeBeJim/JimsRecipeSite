@@ -5,24 +5,26 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import React, {useEffect, useState} from 'react';
-import first_image from './../../images/1.jpg';
+import Data from '../data.js';
 
 function Recipes() {
     //the following section of code gets backend data, u can go to localhost:5000/api to see it
     //backendData is the entire data
-    const [backendData, setBackendData] = useState([{}])
-    const hi = "/images/1.jpg";
-    useEffect(() => {
-        //change /api to link in heroku
-        fetch("/api").then(
-            response => response.json()
-        ).then(
-            data => {
-                setBackendData(data)
-            }
-        )
-        }, [])
+
+    // const [backendData, setBackendData] = useState([{}])
+    // const hi = "/images/1.jpg";
+    // useEffect(() => {
+    //     //change /api to link in heroku
+    //     fetch("/api").then(
+    //         response => response.json()
+    //     ).then(
+    //         data => {
+    //             setBackendData(data)
+    //         }
+    //     )
+    //     }, []);
     
+    const data = Data();
     //each stores [ map, map, map ]
     //here's how we are gonna do this: server.js gets all data about all recipes, each page that needs it, just grab what they need, Ex: recipes.js just grab name and pic url, each individual recipe page uses this exact same thing, except it gets everything
     
@@ -32,9 +34,7 @@ function Recipes() {
     return (        
         <>
             <Container className="recipe-container">
-                {(typeof backendData.recipe === 'undefined') ? (
-                    <p>Loading...</p>
-                ): (backendData.recipe.map((x, i) => {
+                {data ? (data.recipe.map((x, i) => {
                     //individual json object here
                     //ok _id change to insta link, name change to recipe name price change to time needed
                     return (
@@ -42,16 +42,18 @@ function Recipes() {
                             <a className="cards" href={ "/recipes/"+ x.page } style={{ textDecoration: 'none'}}>
                                 <div className="top-buffer"></div>
                                 <Row className="card_container fancy_card">
-                                    <Col className="insta" sm={8} md={8} lg={6} xl={6}>
-                                        <img alt="loading" src={x.path} />
+                                    <Col className="pic-container" sm={8} md={8} lg={6} xl={6}>
+                                        <img className="pic" alt="loading" src={x.path} />
                                     </Col>
                                     <Col sm={4} md={4} lg={4} xl={4}>{x.name}</Col>
-                                    <Col className="difficulty"sm={0} md={0} lg={2} xl={2}>{x.price}</Col>
+                                    <Col className="difficulty"sm={0} md={0} lg={2} xl={2}>{x.difficulty}</Col>
                                 </Row> 
                             </a>   
                         </>
                     )
                 })
+                ) : (
+                    <p>Loading...</p>
                 )}
                 <div className="bottom-buffer"></div>
             </Container>

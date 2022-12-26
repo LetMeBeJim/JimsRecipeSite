@@ -1,10 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, {useEffect, useState} from 'react'
 
+
+//only places that connect front to back
 export default function Data() {
     const [backendData, setBackendData] = useState(null)
     useEffect(() => {
-    //change /api to link in heroku
+
     fetch("/api").then(
         response => response.json()
     )
