@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 
 
 //only places that connect front to back

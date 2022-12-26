@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Data from '../data.js';
 
 function Recipes() {

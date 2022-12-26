@@ -7,8 +7,8 @@ import Recipes from './component/pages/Recipes';
 import Blog from './component/pages/Blog';
 
 import Individual_Recipe1 from './component/pages/recipes/a';
-import Individual_Recipe2 from './component/pages/recipes/b';
-import Individual_Recipe3 from './component/pages/recipes/c';
+import IndividualRecipe2 from './component/pages/recipes/b';
+import IndividualRecipe3 from './component/pages/recipes/c';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 
@@ -31,9 +31,9 @@ function App() {
         <Routes>
           <Route exact path = "/About_me" element={<AboutMe />}></Route>
           <Route exact path = "/Recipes" element={<Recipes />}></Route>
-          <Route exact path = "/recipes/a" element={<Individual_Recipe1 />}></Route>
-          <Route exact path = "/recipes/b" element={<Individual_Recipe2 />}></Route>
-          <Route exact path = "/recipes/c" element={<Individual_Recipe3 />}></Route>
+          <Route exact path = "/recipes/a" element={<IndividualRecipe1 />}></Route>
+          <Route exact path = "/recipes/b" element={<IndividualRecipe2 />}></Route>
+          <Route exact path = "/recipes/c" element={<IndividualRecipe3 />}></Route>
           {/* Dynamic segment here, import Data file and then get .name for each page */}
           <Route exact path = "/Blog" element={<Blog />}></Route>
           <Route exact path = "/" element={<Home />}></Route>
