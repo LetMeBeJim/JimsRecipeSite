@@ -11,6 +11,7 @@
     "react-instagram-embed": "^3.0.0",
     "react-instagram-media": "^1.3.2",
     "react-instagram-photo-picker": "^1.1.3",
+    "react-scripts": "^5.0.1",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "url": "^0.11.0",
