@@ -5,7 +5,12 @@
 }
 
 .cards {
-  color: black;
+  color: #da7532;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style:italic;
+  opacity: 0.5;
+  transition: all .3s ease;
 }
 
 .top-buffer { 
@@ -37,7 +42,9 @@
 }
 
 .cards:hover {
-  color: #000;
+  color: #da7532;
+  transition: all .3s ease;
+  opacity: 1;
 }
 
 .fancy_card:hover {
@@ -46,7 +53,7 @@
 
 .fancy_card {
   box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 3px 3px rgba(0,0,0,0.22);
-    transition: all .5s ease; /* back to normal */
+  transition: all .5s ease; /* back to normal */
   }
   
 .fancy_card:hover {
