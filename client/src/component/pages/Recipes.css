@@ -26,15 +26,14 @@
   position: relative;
   height: 250px;
   overflow: hidden;
-  width: 100%;
 }
 
 .pic {
-  margin: 0;
   position: absolute;
+  margin: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  max-width: 100%;
 }
 
 .cards:hover {

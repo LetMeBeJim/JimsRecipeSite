@@ -41,7 +41,7 @@ function Recipes() {
                         <>
                             <a className="cards" href={x.page} style={{ textDecoration: 'none'}}>
                                 <div className="top-buffer"></div>
-                                <Row className="card_container fancy_card">
+                                <Row className="card_container fancy_card" sm={12} md={12} lg={12} xl={12}>
                                     <Col className="pic-container" sm={8} md={8} lg={6} xl={6}>
                                         <img className="pic" alt="loading" src={x.path} />
                                     </Col>
