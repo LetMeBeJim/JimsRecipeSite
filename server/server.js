@@ -5,11 +5,16 @@
 // require('dotenv').config();
 
 const express = require("express");
+const cors = require('cors');
 const mongoose = require("mongoose");
 const app = express();
+app.use(cors())
 const { MongoClient } = require("mongodb");
 // const uri=process.env.URI;
 const databaseName = "recipe";
+
+//Middleware: to-do fix CORS error
+
 
 //this part connects to mongodb
 MongoClient.connect("mongodb+srv://yaobojing:JimYao123@cluster0.fzznrzn.mongodb.net/?retryWrites=true&w=majority", 
