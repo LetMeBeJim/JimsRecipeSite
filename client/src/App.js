@@ -31,9 +31,9 @@ function App() {
         <Routes>
           <Route exact path = "/About_me" element={<AboutMe />}></Route>
           <Route exact path = "/Recipes" element={<Recipes />}></Route>
-          <Route exact path = "/recipes/a" element={<IndividualRecipe1 />}></Route>
-          <Route exact path = "/recipes/b" element={<IndividualRecipe2 />}></Route>
-          <Route exact path = "/recipes/c" element={<IndividualRecipe3 />}></Route>
+          <Route exact path = "/a" element={<IndividualRecipe1 />}></Route>
+          <Route exact path = "/b" element={<IndividualRecipe2 />}></Route>
+          <Route exact path = "/c" element={<IndividualRecipe3 />}></Route>
           {/* Dynamic segment here, import Data file and then get .name for each page */}
           <Route exact path = "/Blog" element={<Blog />}></Route>
           <Route exact path = "/" element={<Home />}></Route>
