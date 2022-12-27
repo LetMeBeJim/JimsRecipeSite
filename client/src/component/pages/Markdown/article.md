@@ -18,10 +18,14 @@ Recent events: [Elon has been deleting people on twitter](https://www.bbc.com/ne
 # --My Site--
 Supposed to be a site that holds everything me-related
 
+### ---Remember--- 
+You, yes you, used webkit for fancy card in recipes, if something goes wrong, remove that!
+
+
 ### To Do
 - [ ] Layout Recipes Database
     - [x] do bootstrap maybe? 
-- [ ] Optimize for mobile
+- [x] Optimize for mobile
     - [ ] definitely use bootstrap for all pages other than Home, that one is gone
 - [ ] Add actual recipe data
     - [x] database structure done

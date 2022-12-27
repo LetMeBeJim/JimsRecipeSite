@@ -42,11 +42,11 @@ function Recipes() {
                             <a className="cards" href={x.page} style={{ textDecoration: 'none'}}>
                                 <div className="top-buffer"></div>
                                 <Row className="card_container fancy_card" sm={12} md={12} lg={12} xl={12}>
-                                    <Col className="pic-container" sm={8} md={8} lg={6} xl={6}>
+                                    <Col className="pic-container" xs={8} sm={8} md={8} lg={6} xl={6}>
                                         <img className="pic" alt="loading" src={x.path} />
                                     </Col>
-                                    <Col sm={4} md={4} lg={4} xl={4}>{x.name}</Col>
-                                    <Col className="difficulty"sm={0} md={0} lg={2} xl={2}>{x.difficulty}</Col>
+                                    <Col xs={4} sm={4} md={4} lg={4} xl={4}>{x.name}</Col>
+                                    <Col className="difficulty" xs={0} sm={0} md={0} lg={2} xl={2}>{x.difficulty}</Col>
                                 </Row> 
                             </a>   
                         </>
