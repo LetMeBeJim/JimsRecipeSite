@@ -1,19 +1,22 @@
 //run it with npm run dev, this way it updates with browser refresh
 //servername: jimrecipe
 //password: JimYao123
-require('dotenv').config();
+
+// require('dotenv').config();
 
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const { MongoClient } = require("mongodb");
-const uri=process.env.URI;
+// const uri=process.env.URI;
 const databaseName = "recipe";
 
 //this part connects to mongodb
-MongoClient.connect(uri, { useNewUrlParser: true }, function(err, db) {
+MongoClient.connect("mongodb+srv://yaobojing:JimYao123@cluster0.fzznrzn.mongodb.net/?retryWrites=true&w=majority", 
+  { useNewUrlParser: true }, 
+  function(err, db) {
   if (err) {
-    return console.log("Connection failed");
+    return console.log(err);
   }
   console.log("Connection established - All Well");
   //databasename is the name of the database, note name is recipe, collection is recipes
@@ -24,17 +27,12 @@ MongoClient.connect(uri, { useNewUrlParser: true }, function(err, db) {
     app.get("/api", (req, res) => {
       //this part sends result to front end, making it into a hash {"recipes":others}
       res.json({"recipe": result});
-      //res.json({"users": ["userOne", "userTwo", "userThree", "userFour"]});
     });
 
     db.close()
   })
 })
 
-//makes sure server is listening on port 5000
-app.listen(process.env.PORT || 5000, () => { console.log("Server started on port 5000")})
-
-//app.get("/api", (req, res) => {
-//  res.json({"users": ["userOne", "userTwo", "userThree", "userFour"]});
-//});
-
+// //makes sure server is listening on port 5000
+// app.listen(process.env.PORT || 5000, () => { console.log("Server started on port 5000")})
+app.listen(process.env.PORT || 5000, () => { console.log("Server started")})

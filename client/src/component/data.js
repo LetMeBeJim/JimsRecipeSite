@@ -7,7 +7,7 @@ export default function Data() {
     const [backendData, setBackendData] = useState(null)
     useEffect(() => {
 
-    fetch("/api").then(
+    fetch("https://jimsiteserver.ue.r.appspot.com/api").then(
         response => response.json()
     )
     .then(
