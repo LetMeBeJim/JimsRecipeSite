@@ -6,6 +6,8 @@ import AboutMe from './component/pages/About_me';
 import Recipes from './component/pages/Recipes';
 import Blog from './component/pages/Blog';
 
+
+
 import IndividualRecipe1 from './component/pages/recipes/a';
 import IndividualRecipe2 from './component/pages/recipes/b';
 import IndividualRecipe3 from './component/pages/recipes/c';
