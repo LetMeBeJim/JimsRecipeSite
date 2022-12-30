@@ -22,15 +22,15 @@ Supposed to be a site that holds everything me-related
 You, yes you, used webkit for fancy card in recipes, if something goes wrong, remove that!
 
 
-### To Do
-- [ ] Layout Recipes Database
-    - [x] do bootstrap maybe? 
-- [x] Optimize for mobile
-    - [ ] definitely use bootstrap for all pages other than Home, that one is gone
-- [ ] Add actual recipe data
-    - [x] database structure done
-- [x] Remember to add insta link in the recipe data entry, use the insta link to get image for banner display
-- [ ] Sub pages? 
+### To Do 
+- [ ] Optimize for mobile
+    -[x] Home page
+    -[ ] individual recipes
+    -[ ] markdown
+- [ ] Add actual recipe data that you like
+- [ ] Either use query string to get recipes, or move the page formatting into a function
+- [ ] Dynamic routing?
+- [ ] Do a dynamic page about languages I know and where I learned them from, when cursor hover on language, make it so all other courses disappear and only where I learned that language remains
 - [ ] Write something in the about me section
 
 ### Super super future functionalities

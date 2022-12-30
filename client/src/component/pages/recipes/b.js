@@ -12,7 +12,7 @@ function a() {
     return (
         <>
             <Container className="recipe-container">
-                {data ?  (data.recipe.filter((item) => item._id=== 1)
+                {data ?  (data.recipe.filter((item) => item._id=== 2)
                 .map((x,i) => {
                     //change to page format
                     return (
@@ -29,7 +29,24 @@ function a() {
                             </Row>
                             <div className="top-buffer"></div>
                             <Row>
-                                <Col sm={12} md={12} lg={12} xl={12}>{x.steps}</Col>
+                                <Col sm={12} md={12} lg={12} xl={12}>
+                                    {
+                                        x.steps.split(".").map(function(item, idx) {
+                                            if (item === ""){
+                                                return (
+                                                    ""
+                                                );
+                                            }
+                                            return (
+                                                <span key={idx}>
+                                                    {idx+1}.{item}
+                                                    <br/>
+                                                    <br/>
+                                                </span>
+                                            )
+                                        })
+                                    }
+                                </Col>
                             </Row>
                             <div className="top-buffer"></div>
                         </>

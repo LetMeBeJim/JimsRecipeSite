@@ -29,7 +29,24 @@ function a() {
                             </Row>
                             <div className="top-buffer"></div>
                             <Row>
-                                <Col sm={12} md={12} lg={12} xl={12}>{x.steps}</Col>
+                                <Col sm={12} md={12} lg={12} xl={12}>
+                                    {
+                                        x.steps.split(".").map(function(item, idx) {
+                                            if (item === ""){
+                                                return (
+                                                    ""
+                                                );
+                                            }
+                                            return (
+                                                <span key={idx}>
+                                                    {idx+1}.{item}
+                                                    <br/>
+                                                    <br/>
+                                                </span>
+                                            )
+                                        })
+                                    }
+                                </Col>
                             </Row>
                             <div className="top-buffer"></div>
                         </>
