@@ -32,7 +32,18 @@ MongoClient.connect("mongodb+srv://yaobojing:JimYao123@cluster0.fzznrzn.mongodb.
     app.get("/api", (req, res) => {
       //this part sends result to front end, making it into a hash {"recipes":others}
       res.json({"recipe": result});
-    });
+    })
+    app.get('/api/:_id', (req, res) => {
+      const _id = req.params._id;
+      for (let each of result) {
+        if (each._id === parseInt(_id)) {
+          console.log(_id);
+          res.json(each);
+          return;
+        }
+      }
+    }
+    );
 
     db.close()
   })
