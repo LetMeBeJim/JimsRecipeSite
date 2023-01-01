@@ -12,7 +12,7 @@ function a() {
     return (
         <>
             <Container className="recipe-container">
-                {data ?  (data.recipe.filter((item) => item.name === 'ccccc ccccc')
+                {data ?  (data.recipe.filter((item) => item._id=== 3)
                 .map((x,i) => {
                     //change to page format
                     return (

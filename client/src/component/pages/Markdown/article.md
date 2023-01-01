@@ -1,5 +1,9 @@
 # --Blog--
 ### December
+<sub>*Dec-31-2022*</sub>
+
+Imagine spending New Year's Eve making this website, Wooo.
+
 <sub>*Dec-21-2022*</sub>
 
 Finished Trial-#4 in milestone folder, that one is current milestone, need to practice environment drawing and more consistent colours, "make it glow", "strike some feeling". Need to add a gallery in the future maybe?
@@ -27,9 +31,14 @@ You, yes you, used webkit for fancy card in recipes, if something goes wrong, re
     -[x] Home page
     -[ ] individual recipes
     -[ ] markdown
-- [ ] Add actual recipe data that you like
+- [x] Add actual recipe data that you like
+    - [ ] you should add the yellow braised chicken one
 - [ ] Either use query string to get recipes, or move the page formatting into a function
+    - [ ] Let's not do query string, moving page return makes it easier to be manipulated
 - [ ] Dynamic routing?
+- [ ] RESTful API
+    - [x] Server end organization
+    - [ ] Client side get data follows /api/:id, instead of current filter
 - [ ] Do a dynamic page about languages I know and where I learned them from, when cursor hover on language, make it so all other courses disappear and only where I learned that language remains
 - [ ] Write something in the about me section
 
