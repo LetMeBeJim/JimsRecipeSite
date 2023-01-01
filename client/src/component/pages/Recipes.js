@@ -54,6 +54,7 @@ function Recipes() {
                 })
                 ) : (
                     <p>Loading...</p>
+                    
                 )}
                 <div className="bottom-buffer"></div>
             </Container>
