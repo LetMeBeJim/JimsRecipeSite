@@ -46,7 +46,7 @@ function Recipes() {
                                         <img className="pic" alt="loading" src={x.path} />
                                     </Col>
                                     <Col xs={4} sm={4} md={4} lg={4} xl={4}>{x.name}</Col>
-                                    <Col className="difficulty" xs={0} sm={0} md={0} lg={2} xl={2}>{x.difficulty}</Col>
+                                    <Col className="difficulty" xs={0} sm={0} md={0} lg={2} xl={2}>{x.difficulty} min</Col>
                                 </Row> 
                             </a>   
                         </>
