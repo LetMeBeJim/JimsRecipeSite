@@ -18,3 +18,19 @@ export default function Data() {
     }, [])
     return backendData;
 }
+
+export function DataRecipe(x) {
+    const [backendData, setBackendData] = useState(null)
+    useEffect(() => {
+
+    fetch("https://jimsiteserver.ue.r.appspot.com/api/"+x).then(
+        response => response.json()
+    )
+    .then(
+        data => {
+            setBackendData(data)
+        }
+    )
+    }, [])
+    return backendData;
+}
