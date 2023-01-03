@@ -2,14 +2,15 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default function setupA(x) {
+
     return (
-        <>
+        <div className="recipe_body">
         <div className="top-buffer"></div>
         <Row>
             <Col className="individual_photo_container" sm={12} md={6} lg={6} xl={6}>
                 <img className="individual_photo" alt="loading" src={x.path} />
             </Col>
-            <Col className="info_card">
+            <Col className="info_card card_container fancy_card">
                 <Row sm={12} md={6} lg={6} xl={6}>{x.name}</Row>
                 <Row sm={12} md={6} lg={6} xl={6}>
                     {
@@ -33,9 +34,10 @@ export default function setupA(x) {
                     }
                 </Row>
             </Col>
+            
         </Row>
         <div className="top-buffer"></div>
-        <Row>
+        <Row className="steps card_container fancy_card">
             <Col sm={12} md={12} lg={12} xl={12}>
                 {
                     x.steps.split(".").map(function(item, idx) {
@@ -56,7 +58,7 @@ export default function setupA(x) {
             </Col>
         </Row>
         <div className="top-buffer"></div>
-    </>
+    </div>
     )
 }
 

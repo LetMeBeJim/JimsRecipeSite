@@ -6,11 +6,10 @@ import AboutMe from './component/pages/About_me';
 import Recipes from './component/pages/Recipes';
 import Blog from './component/pages/Blog';
 
-
-
-import IndividualRecipe1 from './component/pages/recipes/a';
-import IndividualRecipe2 from './component/pages/recipes/b';
-import IndividualRecipe3 from './component/pages/recipes/c';
+import Recipe1 from './component/pages/recipes/a';
+import Recipe2 from './component/pages/recipes/b';
+import Recipe3 from './component/pages/recipes/c';
+import Recipe4 from './component/pages/recipes/d';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 
@@ -18,14 +17,6 @@ import './App.css';
 
 function App() {
   /* this is used to connect api to react front end, by fetching whatever is displayed in 3001/api to jere*/
-  /*const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  });*/
-
   return (
     <>
       <Router>
@@ -33,9 +24,10 @@ function App() {
         <Routes>
           <Route exact path = "/About_me" element={<AboutMe />}></Route>
           <Route exact path = "/Recipes" element={<Recipes />}></Route>
-          <Route exact path = "/a" element={<IndividualRecipe1 />}></Route>
-          <Route exact path = "/b" element={<IndividualRecipe2 />}></Route>
-          <Route exact path = "/c" element={<IndividualRecipe3 />}></Route>
+          <Route exact path = "/a" element={<Recipe1 />}></Route>
+          <Route exact path = "/b" element={<Recipe2 />}></Route>
+          <Route exact path = "/c" element={<Recipe3 />}></Route>
+          <Route exact path = "/d" element={<Recipe4 />}></Route>
           {/* Dynamic segment here, import Data file and then get .name for each page */}
           <Route exact path = "/Blog" element={<Blog />}></Route>
           <Route exact path = "/" element={<Home />}></Route>

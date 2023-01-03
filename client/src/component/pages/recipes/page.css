@@ -2,3 +2,27 @@
     width:100%;
     border-radius: 10%;
 }
+
+.info_card {
+    background-color: #fff4ed;
+    padding:2%;
+    border-radius: 10%;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .cards:hover {
+        color: #da7532;
+        transition: all .3s ease;
+        opacity: 1;
+      }
+      
+    .fancy_card:hover {
+        transform: translate3D(0,-1px,0) scale(1.00);
+    }
+    
+    .fancy_card:hover {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        transition: all .4s ease; /* zoom in */
+    }
+}
