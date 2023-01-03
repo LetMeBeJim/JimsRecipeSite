@@ -23,7 +23,7 @@ function Recipes() {
     //         }
     //     )
     //     }, []);
-    
+    const refresh = () => window.location.reload(true)
     const data = Data();
     //each stores [ map, map, map ]
     //here's how we are gonna do this: server.js gets all data about all recipes, each page that needs it, just grab what they need, Ex: recipes.js just grab name and pic url, each individual recipe page uses this exact same thing, except it gets everything
@@ -53,7 +53,9 @@ function Recipes() {
                     )
                 })
                 ) : (
-                    <p>Loading...</p>
+                    <div><p>Loading...</p>
+                    {refresh}</div>
+                    
                     
                 )}
                 <div className="bottom-buffer"></div>
