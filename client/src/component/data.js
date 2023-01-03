@@ -31,6 +31,6 @@ export function DataRecipe(x) {
             setBackendData(data)
         }
     )
-    }, [])
+    }, [x])
     return backendData;
 }
