@@ -31,19 +31,12 @@ You, yes you, used webkit for fancy card in recipes, if something goes wrong, re
     -[x] Home page
     -[ ] individual recipes
     -[ ] markdown
-- [x] Add actual recipe data that you like
-    - [ ] you should add the yellow braised chicken one
-- [ ] Either use query string to get recipes, or move the page formatting into a function
-    - [ ] Let's not do query string, moving page return makes it easier to be manipulated
+- [ ] Remove recipe items, maybe include some sort of login?
+- [ ] Search bar
 - [ ] Dynamic routing?
-- [ ] RESTful API
-    - [x] Server end organization
-    - [ ] Client side get data follows /api/:id, instead of current filter
-- [ ] Do a dynamic page about languages I know and where I learned them from, when cursor hover on language, make it so all other courses disappear and only where I learned that language remains
 - [ ] Write something in the about me section
 
 ### Super super future functionalities
-- [ ] Add in a search function for recipes
 - [ ] Add in a place for my drawings? (wait until when I can actually draw)
 - [ ] Add in a function for adding recipes
 - [ ] Add in a function for email recipes
@@ -58,3 +51,4 @@ So, imagine a bot that gives you a image from the weekly top list on Pixiv, that
     - [x] Is picture downloading?
     - [ ] Is bot responding?
     - [ ] Is picture deleted after wards?
+
