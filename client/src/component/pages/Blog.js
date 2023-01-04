@@ -23,7 +23,7 @@ function Blog() {
     }, []);
     return (
         <div>
-            <img src={"https://mime-rs.b-cdn.net/play/tired?text=" + time + "+" + "and you should be coding"} alt="meme"/>
+            <img src={"https://mime-rs.b-cdn.net/play/tired?text=" + time + "+ and you should be coding"} alt="meme"/>
             <article className="article">
                 <div className="container">
                 <div className="blog_container">
