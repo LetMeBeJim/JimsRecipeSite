@@ -27,6 +27,9 @@ You, yes you, used webkit for fancy card in recipes, if something goes wrong, re
 
 
 ### To Do 
+Just how long does it take you to move your pass-string into a .env file? DO IT
+
+
 - [ ] Optimize for mobile
     -[x] Home page
     -[ ] individual recipes
@@ -51,4 +54,9 @@ So, imagine a bot that gives you a image from the weekly top list on Pixiv, that
     - [x] Is picture downloading?
     - [ ] Is bot responding?
     - [ ] Is picture deleted after wards?
+
+# --Jim's Task App -- 
+This is gonna be very helpful in getting my tasks on a server, and using the mobile app to add/delete quickly
+- [ ] Add ability to delete
+- [ ] Add ability to delete in backend
 
