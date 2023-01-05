@@ -1,8 +1,10 @@
+var myPassword = require('./password');
 //run it with npm run dev, this way it updates with browser refresh
 //servername: jimrecipe
 //password: JimYao123
-
 // require('dotenv').config();
+
+var password = myPassword.password;
 
 const express = require("express");
 const cors = require('cors');
@@ -17,7 +19,7 @@ const databaseName = "recipe";
 
 
 //this part connects to mongodb
-MongoClient.connect("mongodb+srv://yaobojing:JimYao123@cluster0.fzznrzn.mongodb.net/?retryWrites=true&w=majority", 
+MongoClient.connect(password, 
   { useNewUrlParser: true }, 
   function(err, db) {
   if (err) {
