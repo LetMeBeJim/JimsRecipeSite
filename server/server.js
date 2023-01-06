@@ -1,7 +1,7 @@
 var myPassword = require('./password');
 //run it with npm run dev, this way it updates with browser refresh
 //servername: jimrecipe
-//password: JimYao123
+
 // require('dotenv').config();
 
 var password = myPassword.password;
@@ -29,13 +29,36 @@ MongoClient.connect(password,
   //databasename is the name of the database, note name is recipe, collection is recipes
   var dbo = db.db(databaseName)
   //this part gets $project attributes in recipes table
-  dbo.collection("recipes").aggregate([{ $project : {_id : 1, name: 1, difficulty: 1, path: 1, page: 1, steps: 1, ingredients: 1}}]).toArray(function(err, result) {
-    if (err) throw err;
-    app.get("/api", (req, res) => {
-      //this part sends result to front end, making it into a hash {"recipes":others}
+  // dbo.collection("recipes").aggregate([{ $project : {_id : 1, name: 1, difficulty: 1, path: 1, page: 1, steps: 1, ingredients: 1}}]).toArray(function(err, result) {
+  //   if (err) throw err;
+  //   app.get("/api", (req, res) => {
+  //     //this part sends result to front end, making it into a hash {"recipes":others}
+  //     res.json({"recipe": result});
+  //   })
+  //   app.get('/api/:_id', (req, res) => {
+  //     const _id = req.params._id;
+  //     for (let each of result) {
+  //       if (each._id === parseInt(_id)) {
+  //         console.log(_id);
+  //         res.json(each);
+  //         return;
+  //       }
+  //     }
+  //   }
+  //   );
+
+  //   db.close()
+  // })
+
+  app.get("/api", (req, res) => {
+    dbo.collection("recipes").aggregate([{ $project : {_id : 1, name: 1, difficulty: 1, path: 1, page: 1, steps: 1, ingredients: 1} }]).toArray(function(err, result){
+      if (err) throw err;
       res.json({"recipe": result});
     })
-    app.get('/api/:_id', (req, res) => {
+  })
+
+  app.get('/api/:_id', (req, res) => {
+    dbo.collection("recipes").aggregate([{ $project : {_id : 1, name: 1, difficulty: 1, path: 1, page: 1, steps: 1, ingredients: 1}}]).toArray(function(err, result) {
       const _id = req.params._id;
       for (let each of result) {
         if (each._id === parseInt(_id)) {
@@ -44,11 +67,9 @@ MongoClient.connect(password,
           return;
         }
       }
-    }
-    );
-
-    db.close()
+    })
   })
+
 })
 
 // //makes sure server is listening on port 5000
