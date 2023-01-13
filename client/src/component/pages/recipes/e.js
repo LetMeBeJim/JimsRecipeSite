@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container';
 import {DataRecipe} from '../../data.js';
 import setupA from './setupA.js'
 
-function d() {
-    const data = DataRecipe(4);
+function e() {
+    const data = DataRecipe(5);
     return (
         <>
             <Container className="recipe-container">
@@ -21,4 +21,4 @@ function d() {
 }
 
 
-export default d;
+export default e;
