@@ -72,6 +72,43 @@ MongoClient.connect(password,
 
 })
 
+
+// MongoClient.connect(password, 
+//   { useNewUrlParser: true }, 
+//   function(err, db) {
+//   if (err) {
+//     return console.log(err);
+//   }
+//   var dbo = db.db(databaseName)
+//   console.log("Connection established - All Well");
+//   app.get('/del/:detailHere', (req,res) => {
+//     var myquery = { detail: req.params.detailHere };
+//     dbo.collection("task").deleteOne(myquery, function(err, obj) {
+//       if (err) throw err;
+//       console.log("1 document deleted");
+//     });
+//     res.redirect('/api');
+//   })
+//   })
+
+// MongoClient.connect(password, 
+//   { useNewUrlParser: true }, 
+//   function(err, db) {
+//   if (err) {
+//     return console.log(err);
+//   }
+//   var dbo = db.db(databaseName)
+//   console.log("Connection established - All Well");
+//   app.get('/ins/:detailHere', (req,res) => {
+//     var myobj = { detail: req.params.detailHere, priority: '0'};
+//     dbo.collection("task").insertOne(myobj, function(err, res) {
+//       if (err) throw err;
+//       console.log("1 document inserted");
+//     })
+//     res.redirect('/api');
+//   })
+//   })
+
 // //makes sure server is listening on port 5000
 // app.listen(process.env.PORT || 5000, () => { console.log("Server started on port 5000")})
 app.listen(process.env.PORT || 5000, () => { console.log("Server started")})

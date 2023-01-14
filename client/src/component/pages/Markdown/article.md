@@ -27,36 +27,16 @@ You, yes you, used webkit for fancy card in recipes, if something goes wrong, re
 
 
 ### To Do 
-Just how long does it take you to move your pass-string into a .env file? DO IT
-
-
-- [ ] Optimize for mobile
-    -[x] Home page
-    -[ ] individual recipes
-    -[ ] markdown
-- [ ] Remove recipe items, maybe include some sort of login?
-- [ ] Search bar
 - [ ] Dynamic routing?
 - [ ] Write something in the about me section
+- [ ] App for adding recipes, never, removing recipes
 
 ### Super super future functionalities
-- [ ] Add in a place for my drawings? (wait until when I can actually draw)
-- [ ] Add in a function for adding recipes
+- [ ] Gallery: Add in a place for my drawings? (wait until when I can actually draw)
 - [ ] Add in a function for email recipes
-- [ ] Add page for everything I know about drawing? I should store what I know somewhere
-    - [ ] I'm thinking maybe like, small nav-bar on the left that leads to sub pages? maybe?
-
-# --Discord Mental Relief Bot--
-So, imagine a bot that gives you a image from the weekly top list on Pixiv, that gotta make the day better eh?
-
-### To Do
-- [ ] Add delay for the bot reaction and fix the bot not uploading pictures issue
-    - [x] Is picture downloading?
-    - [ ] Is bot responding?
-    - [ ] Is picture deleted after wards?
 
 # --Jim's Task App -- 
 This is gonna be very helpful in getting my tasks on a server, and using the mobile app to add/delete quickly
-- [ ] Add ability to delete
-- [ ] Add ability to delete in backend
+- [ ] Buy a cheap android phone and curse apple
+- [ ] Maybe talk to my recipe api on this app too
 
