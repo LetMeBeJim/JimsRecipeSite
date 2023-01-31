@@ -34,3 +34,19 @@ export function DataRecipe(x) {
     }, [x])
     return backendData;
 }
+
+export function DataTasks() {
+    const [backendData, setBackendData] = useState(null)
+    useEffect(() => {
+
+    fetch("https://jimstasks.ue.r.appspot.com/api").then(
+        response => response.json()
+    )
+    .then(
+        data => {
+            setBackendData(data)
+        }
+    )
+    }, [])
+    return backendData;
+}

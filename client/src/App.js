@@ -2,10 +2,8 @@ import React from 'react';
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
 import Home from './component/pages/Home';
-import AboutMe from './component/pages/About_me';
 import Recipes from './component/pages/Recipes';
 import Blog from './component/pages/Blog';
-
 import Recipe1 from './component/pages/recipes/a';
 import Recipe2 from './component/pages/recipes/b';
 import Recipe3 from './component/pages/recipes/c';
@@ -26,7 +24,6 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path = "/About_me" element={<AboutMe />}></Route>
           <Route exact path = "/Recipes" element={<Recipes />}></Route>
           <Route exact path = "/a" element={<Recipe1 />}></Route>
           <Route exact path = "/b" element={<Recipe2 />}></Route>

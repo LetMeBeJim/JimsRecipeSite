@@ -22,11 +22,6 @@ function Footer() {
                         </Link>
                     </li>
                     <li className='footer-items'>
-                        <Link to='/About_me' className='footer-links' onClick={closeMobileMenu}>
-                            About Me
-                        </Link>
-                    </li>
-                    <li className='footer-items'>
                         <a href="https://github.com/LetMeBeJim" className='footer-links' onClick={closeMobileMenu}>
                             Github
                         </a>
