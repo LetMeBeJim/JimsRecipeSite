@@ -2,7 +2,7 @@ import './Blog.css'
 import React from 'react';
 import Markdown from "markdown-to-jsx"
 import {useEffect, useState} from "react"
-import Data, { DataTasks } from '../data.js';
+import { DataTasks } from '../data.js';
 
 function Blog() {
     const [postContent, setPostContent] = useState("");
