@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css';
+import { Context } from './Context';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -8,6 +9,8 @@ function Navbar() {
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false)
+
+    const { isAuth, setAuth } = useContext(Context);
 
     const showButton = () => {
         if(window.innerWidth <= 960) {
@@ -21,6 +24,9 @@ function Navbar() {
 
     return (
     <>
+        <div>
+            {isAuth == 0? <p>not authorized</p> : <p>authorized</p>}
+        </div>
         <div className="navbar-addon">
             <Link to="/" className="navbar-logo">
                 <i className='fa fa-shopping-basket fa-2x'/>

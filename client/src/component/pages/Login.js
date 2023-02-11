@@ -1,10 +1,14 @@
 import './Blog.css'
 import React from 'react';
-import {useEffect, useState} from "react"
+import {useContext, useEffect, useState} from "react"
+import { Context } from '../Context';
 
 function Login() {
     const [username, setUserName] = useState("");
     const [password, setPassword] = useState("");
+
+    const { isAuth, setAuth } = useContext(Context);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         //------- Change here to proper backend address
@@ -18,12 +22,18 @@ function Login() {
                 password: password,
             }),
         });
+        
         let result = await res.json();
-        console.log(result.token)
+        localStorage.setItem('token', result.token);
+        console.log(localStorage.getItem('token'));
         if (result.status === "ok") {
-            console.log("got it")
+            console.log("got a token")
+            setAuth(() => 1);
+            console.log(isAuth)
         } else {
-            console.log("nope")
+            console.log("nope, didn't get a token")
+            setAuth(() => 0);
+            console.log(isAuth)
         }
     }
     return (
