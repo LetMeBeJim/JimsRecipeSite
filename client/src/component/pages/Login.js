@@ -18,8 +18,13 @@ function Login() {
                 password: password,
             }),
         });
-        let resFinal = await res.status;
-        console.log(resFinal);
+        let result = await res.json();
+        console.log(result.token)
+        if (result.status === "ok") {
+            console.log("got it")
+        } else {
+            console.log("nope")
+        }
     }
     return (
         <div>

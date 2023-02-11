@@ -68,14 +68,22 @@ app.post("/login", urlencodedParser, jsonParser, (req, res) => {
   const data = req.body;
   const username = req.body.username;
   const password = req.body.password;
+
   if(username === myPassword.userName && password === myPassword.userPassword){
+    console.log("success")
+    const user = {
+      username: username,
+    }
     jwt.sign({user: user}, 'secretkey', (err, token) => {
       res.json({
-        token: token
+        token: token,
+        status: "ok"
       });
     });
   } else {
-    res.sendStatus(403);
+    res.json({
+      status: "bad"
+    })
   }
 })
 
