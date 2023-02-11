@@ -1,6 +1,9 @@
 var myPassword = require('./password');
 //run it with npm run dev, this way it updates with browser refresh
 //servername: jimrecipe
+var bodyParser = require('body-parser')
+var jsonParser = bodyParser.json()
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 // require('dotenv').config();
 
@@ -53,16 +56,27 @@ MongoClient.connect(password,
 })
 const jwt = require('jsonwebtoken');
 
-app.post("/login", (req, res) => {
-  const user = {
-    id: 1,
-    username: 'jim',
-  }
-  jwt.sign({user: user}, 'secretkey', (err, token) => {
-    res.json({
-      token: token
+app.post("/test", (req, res) => {
+  res.json({message: "okay!"});
+})
+
+app.post("/login", urlencodedParser, jsonParser, (req, res) => {
+  // const user = {
+  //   id: 1,
+  //   username: 'jim',
+  // }
+  const data = req.body;
+  const username = req.body.username;
+  const password = req.body.password;
+  if(username === myPassword.userName && password === myPassword.userPassword){
+    jwt.sign({user: user}, 'secretkey', (err, token) => {
+      res.json({
+        token: token
+      });
     });
-  });
+  } else {
+    res.sendStatus(403);
+  }
 })
 
 app.post("/secret", verifyToken, (req, res) => {

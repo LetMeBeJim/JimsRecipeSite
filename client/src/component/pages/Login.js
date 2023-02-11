@@ -3,15 +3,32 @@ import React from 'react';
 import {useEffect, useState} from "react"
 
 function Login() {
-    
+    const [username, setUserName] = useState("");
+    const [password, setPassword] = useState("");
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        //------- Change here to proper backend address
+        let res = await fetch("http://localhost:5000/login ", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password,
+            }),
+        });
+        let resFinal = await res.status;
+        console.log(resFinal);
+    }
     return (
         <div>
-            <form>  
+            <form onSubmit = {handleSubmit}>  
                 <div class="container">   
                     <label>Username : </label>   
-                    <input type="text" placeholder="Enter Username" name="username" required />  <br></br>
+                    <input type="text" placeholder="Enter Username" name="username" onChange = {(e) => setUserName(e.target.value)} required />  <br></br>
                     <label>Password : </label>   
-                    <input type="password" placeholder="Enter Password" name="password" required></input>  
+                    <input type="password" placeholder="Enter Password" name="password" onChange = {(e) => setPassword(e.target.value)} required></input>  
                     <button type="submit">Login</button>   
                 </div> 
             </form>
