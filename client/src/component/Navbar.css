@@ -60,6 +60,17 @@
   margin-right: 2rem;
 }
 
+.nav-menu1 {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 20px;
+  list-style: none;
+  text-align: center;
+  width: 75vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
 .nav-item {
   height: 80px;
   color: #fff;
