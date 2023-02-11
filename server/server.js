@@ -51,7 +51,77 @@ MongoClient.connect(password,
   })
 
 })
+const jwt = require('jsonwebtoken');
 
+app.post("/login", (req, res) => {
+  const user = {
+    id: 1,
+    username: 'jim',
+  }
+  jwt.sign({user: user}, 'secretkey', (err, token) => {
+    res.json({
+      token: token
+    });
+  });
+})
+
+app.post("/secret", verifyToken, (req, res) => {
+  jwt.verify(req.token, 'secretkey', (err, authData) => {
+    if(err) {
+      res.sendStatus(403);
+    } else {
+      res.json({
+        message: 'secret entered',
+        authData: authData
+      });
+    }
+  });
+})
+
+
+
+
+MongoClient.connect(password,
+  { useNewUrlParser: true },
+  function(err, db) {
+    if (err) {
+      return console.log(err);
+    }
+    const jwt = require('jsonwebtoken');
+    const dotenv = require('dotenv');
+    dotenv.config();
+    process.env.TOKEN_SECRET;
+
+    console.log("Connection secured - now in db modification mode");
+    var dbo = db.db(databaseName)
+
+    app.get("/ins", (req, res) => {
+
+    })
+
+    app.get("/del", (req, res) => {
+
+    })
+  })
+
+//Format
+//authorization: bearer <access_token>
+function verifyToken(req, res, next) {
+  const bearerHeader = req.headers['authorization'];
+  //check if undefined
+  if(typeof bearerHeader != 'undefined') {
+    const bearer = bearerHeader.split(' ');
+    const bearerToken = bearer[1];
+
+    req.token = bearerToken;
+
+    next();
+  } else {
+    res.sendStatus(403);
+  }
+
+
+}
 
 // MongoClient.connect(password, 
 //   { useNewUrlParser: true }, 
