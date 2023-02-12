@@ -104,7 +104,6 @@ app.post("/secret", urlencodedParser, jsonParser, verifyToken, (req, res) => {
       });
     }
   });
-
 })
 
 
@@ -116,16 +115,32 @@ MongoClient.connect(password,
     if (err) {
       return console.log(err);
     }
-    const jwt = require('jsonwebtoken');
-    const dotenv = require('dotenv');
-    dotenv.config();
-    process.env.TOKEN_SECRET;
-
     console.log("Connection secured - now in db modification mode");
-    var dbo = db.db(databaseName)
+    var dbo = db.db(databaseName);
 
-    app.get("/ins", (req, res) => {
+    app.post("/secret/ins", urlencodedParser, jsonParser, verifyToken, (req, res) => {
+      console.log("in insert")
+      jwt.verify(req.get('authorization'), 'secretkey', (err, authData) => {
+        if(err) {
+          console.log(req.get('authorization'));
+          console.log("jwt verify error")
+          res.sendStatus(403);
+        } else {
+          console.log("auth verified")
+          const data = req.body;
 
+          var myobj = data;
+          dbo.collection("recipes").insertOne(myobj, function(err, res) {
+            if (err) throw err;
+            console.log("1 document inserted");
+          })
+          res.json({
+            message: 'insert completed',
+            authData: authData
+          });
+
+        }
+      });
     })
 
     app.get("/del", (req, res) => {

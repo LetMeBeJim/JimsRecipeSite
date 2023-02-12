@@ -24,7 +24,7 @@ function AddRecipe() {
         const data = {};
         formData.forEach((value, key) => (data[key] = value));
         console.log(data)
-        let res = await fetch("http://localhost:5000/secret ", {
+        let res = await fetch("http://localhost:5000/secret/ins ", {
             method: "POST",
             headers: {
                 'authorization': localStorage.getItem('token'), 
