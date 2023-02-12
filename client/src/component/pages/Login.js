@@ -39,7 +39,7 @@ function Login() {
     return (
         <div>
             <form onSubmit = {handleSubmit}>  
-                <div class="container">   
+                <div className="container">   
                     <label>Username : </label>   
                     <input type="text" placeholder="Enter Username" name="username" onChange = {(e) => setUserName(e.target.value)} required />  <br></br>
                     <label>Password : </label>   

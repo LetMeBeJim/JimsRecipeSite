@@ -70,7 +70,7 @@ app.post("/login", urlencodedParser, jsonParser, (req, res) => {
   const password = req.body.password;
 
   if(username === myPassword.userName && password === myPassword.userPassword){
-    console.log("success")
+    console.log("login success")
     const user = {
       username: username,
     }
@@ -87,17 +87,24 @@ app.post("/login", urlencodedParser, jsonParser, (req, res) => {
   }
 })
 
-app.post("/secret", verifyToken, (req, res) => {
-  jwt.verify(req.token, 'secretkey', (err, authData) => {
+app.post("/secret", urlencodedParser, jsonParser, verifyToken, (req, res) => {
+  console.log("in secret")
+  jwt.verify(req.get('authorization'), 'secretkey', (err, authData) => {
     if(err) {
+      console.log(req.get('authorization'));
+      console.log("jwt verify error")
       res.sendStatus(403);
     } else {
+      console.log("auth verified")
+      const data = req.body;
+      console.log(data);
       res.json({
         message: 'secret entered',
         authData: authData
       });
     }
   });
+
 })
 
 
@@ -141,8 +148,6 @@ function verifyToken(req, res, next) {
   } else {
     res.sendStatus(403);
   }
-
-
 }
 
 // MongoClient.connect(password, 

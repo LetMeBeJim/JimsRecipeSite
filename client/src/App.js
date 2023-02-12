@@ -13,6 +13,7 @@ import Recipe5 from './component/pages/recipes/e';
 // import Recipe7 from './component/pages/recipes/g';
 // import Recipe8 from './component/pages/recipes/h';
 import Login from './component/pages/Login';
+import Modify from './component/pages/Modify';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route exact path = "/Recipes" element={<Recipes />}></Route>
           <Route exact path = "/Login" element={<Login />}></Route>
+          <Route exact path = "/Modify" element={<Modify />}></Route>
           <Route exact path = "/a" element={<Recipe1 />}></Route>
           <Route exact path = "/b" element={<Recipe2 />}></Route>
           <Route exact path = "/c" element={<Recipe3 />}></Route>
