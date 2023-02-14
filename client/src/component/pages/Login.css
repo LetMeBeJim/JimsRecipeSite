@@ -1,0 +1,30 @@
+.login {
+    background-color: #f09152;
+    align-items: center;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 100%;
+    margin-top:5em;
+    margin-bottom:5em;
+    border-radius: 25px;
+}
+
+.login-form {
+    color:aliceblue;
+    padding: 20px;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.login-form button{
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+}
+
+.login-form input{
+    border: none;
+    margin: 1em;
+    border-radius: 25px;
+}

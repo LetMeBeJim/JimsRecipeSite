@@ -1,4 +1,4 @@
-import './Blog.css'
+import './Login.css'
 import React from 'react';
 import {useContext, useEffect, useState} from "react"
 import { Context } from '../Context';
@@ -37,18 +37,22 @@ function Login() {
         }
     }
     return (
-        <div>
-            <form onSubmit = {handleSubmit}>  
-                <div className="container">   
-                    <label>Username : </label>   
-                    <input type="text" placeholder="Enter Username" name="username" onChange = {(e) => setUserName(e.target.value)} required />  <br></br>
-                    <label>Password : </label>   
-                    <input type="password" placeholder="Enter Password" name="password" onChange = {(e) => setPassword(e.target.value)} required></input>  
-                    <button type="submit">Login</button>   
-                </div> 
-            </form>
-        </div>
-        
+        <>
+        <div className="white">
+            <div className="login">
+                <form onSubmit = {handleSubmit} className = "login-form">  
+                    <div className="container">   
+                        <h1>Hi Jim</h1>
+                        <label>Username : </label>   
+                        <input type="text" placeholder="Enter Username" name="username" onChange = {(e) => setUserName(e.target.value)} required />  <br></br>
+                        <label>Password : </label>   
+                        <input type="password" placeholder="Enter Password" name="password" onChange = {(e) => setPassword(e.target.value)} required></input>  <br></br><br></br>
+                        <button type="submit">Login</button>   
+                    </div> 
+                </form>
+            </div>   
+        </div>    
+        </>
     )
 } 
 
