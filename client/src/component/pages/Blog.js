@@ -24,6 +24,7 @@ function Blog() {
     }, []);
     const data = DataTasks();
     const refresh = () => window.location.reload()
+
     return (
         <div>
             <img src={"https://mime-rs.b-cdn.net/play/tired?text=" + time + "+ and you should be coding"} alt="meme"/>
