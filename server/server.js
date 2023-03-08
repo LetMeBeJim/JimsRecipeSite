@@ -23,6 +23,14 @@ const databaseName = "recipe";
 
 
 //this part connects to mongodb
+app.post("/test", (req, res) => {
+  res.json({message: "okay!"});
+})
+
+app.get("/api2", (req, res) => {
+  res.json({message: "also okay!"});
+})
+
 MongoClient.connect(password, 
   { useNewUrlParser: true }, 
   function(err, db) {
@@ -55,10 +63,6 @@ MongoClient.connect(password,
 
 })
 const jwt = require('jsonwebtoken');
-
-app.post("/test", (req, res) => {
-  res.json({message: "okay!"});
-})
 
 app.post("/login", urlencodedParser, jsonParser, (req, res) => {
   // const user = {
